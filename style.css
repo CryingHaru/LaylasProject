@@ -1,0 +1,33 @@
+@import url('src/styles/header.css'); 
+
+body{
+    font-family: 'Poppins', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.scrollerdiv{
+    height: calc(100vh - 50px);
+    overflow: scroll;
+}
+
+
+
+/* Scroll bar */
+::-webkit-scrollbar {
+
+    width: 10px;
+    background-color: #1f1f1f00;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #410e33;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1f1f1f00;
+}
