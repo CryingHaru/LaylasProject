@@ -1,0 +1,118 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  background-image: url(../images/bg.png);
+  font-family: "Trebuchet MS", Arial, Helvetica;
+}
+.form-inline {
+  display: inline-block;
+}
+.navbar-header.col {
+  padding: 0 !important;
+}
+.navbar {
+  background-color: #f8f9fa !important;
+  padding-left: 15px;
+  padding-right: 15 px;
+  border-bottom: 1px solid #d6d6d6;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  height: 58px;
+  font-size: 16px;
+}
+.nav-link img {
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  margin: -6px 0;
+  float: left;
+  margin-right: 10px;
+}
+.navbar .navbar-brand {
+  color: #555;
+  padding-left: 5px;
+  padding-right: 50px;
+  font-family: "Merienda One", sans-serif;
+}
+.navbar .navbar-brand i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.navbar .nav-item i {
+  font-size: 18px;
+}
+.navbar .dropdown-item i {
+  font-size: 16px;
+  min-width: 22px;
+}
+.navbar .nav-item.open > a {
+  background-color: none !important;
+}
+.navbar .dropdown-menu {
+  border-radius: 1px;
+  border-color: #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000000;
+  font-size: 15px;
+  background-color: #f8f9fa;
+}
+.navbar .dropdown-menu a {
+  color: #777;
+  padding: 8px 20px;
+  line-height: normal;
+}
+.navbar .dropdown-menu a:hover,
+.navbar .dropdown-menu a:active {
+  color: #333;
+}
+.navbar .dropdown-menu a:active {
+  background-color: #efe6fa !important;
+}
+.navbar .dropdown-item .material-icons {
+  font-size: 21px;
+  line-height: 16px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.navbar .badge {
+  color: #fff;
+  background: #f44336;
+  font-size: 11px;
+  border-radius: 20px;
+  position: absolute;
+  min-width: 10px;
+  padding: 4px 6px 0;
+  min-height: 18px;
+  top: 5px;
+}
+.navbar .active a,
+.navbar .active a:hover,
+.navbar .active a:focus {
+  background-color: transparent !important;
+}
+.avatar {
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+@media (min-width: 1200px) {
+  .form-inline .input-group {
+    width: 300px;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 1199px) {
+  .form-inline {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .input-group {
+    width: 100%;
+  }
+  .swal2-container {
+    zoom: 1.5;
+  }
+}

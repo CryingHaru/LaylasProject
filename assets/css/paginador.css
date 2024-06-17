@@ -1,0 +1,39 @@
+#btn_pag {
+  border: none;
+  padding: 5px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+
+  background-color: #ddd;
+  color: black;
+  border: 0px solid #435d7d;
+  border-radius: 5px;
+  margin-right: 3px;
+  font-weight: 500;
+}
+
+#btn_pag:hover {
+  background-color: #435d7d;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#pag_act {
+  border: none;
+  color: white;
+  padding: 5px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+
+  background-color: tomato;
+  border: 0px solid #435d7d;
+  border-radius: 5px;
+  margin-right: 3px;
+  cursor: default;
+  font-weight: 500;
+}

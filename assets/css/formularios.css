@@ -1,0 +1,16 @@
+body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  background-image: url(../images/bg_forms.png);
+}
+
+.page-header {
+  color: tomato;
+}
+
+.card-shadow {
+  box-shadow: 0px 3px 5px #bbb;
+}
