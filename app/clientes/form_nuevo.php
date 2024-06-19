@@ -64,6 +64,9 @@
           </div>
         </div>
       </div>
+      <?php if (isset($_GET['s'])) { ?>
+        <input type="hidden" name="s" value="<?php echo $_GET['s']; ?>">
+      <?php } ?>
     </form>
   </div>
 </body>

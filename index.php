@@ -34,7 +34,7 @@
           </div>
 
           <a href="app/clientes/form_listar.php" class="nav-link">Clientes</a>
-          <a href="" class="nav-link">Ventas</a>
+          <a href="app/Ventas/form_listar.php" class="nav-link">Ventas</a>
           <?php
           //Validamos que este enlace esté disponible solo para los administradores
           //if (@$_SESSION['mega_tipo_cuenta'] == 'administrador') {

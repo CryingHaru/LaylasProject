@@ -16,7 +16,7 @@ if ($id == '') {
             confirmButtonText: 'Aceptar',
             timer: 3000
         }).then(() => {
-            window.location.href = 'listado.php';
+            window.location.href = 'form_listar.php';
         });
     </script>
         ";

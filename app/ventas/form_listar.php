@@ -2,11 +2,11 @@
 require_once '../../config/server_connection.php';
 require_once '../../utils/paginador.php';
 $query = "SELECT
-	tbl_productos.*,
-	tbl_marcas.nombre AS nombre_marca
+	tbl_cab_ventas.*,
+	tbl_clientes.nombre AS nombre_cliente
 FROM
-	tbl_productos
-	INNER JOIN tbl_marcas ON tbl_productos.id_marca = tbl_marcas.id_marca";
+	tbl_cab_ventas
+INNER JOIN tbl_clientes ON tbl_cab_ventas.id_cliente = tbl_clientes.id_cliente";
 
 $paginador = new Paginador();
 if (isset($_GET['buscar'])) {
@@ -41,15 +41,15 @@ $paginador->crear_paginador();
   <div class="container-fluid" style="padding-top: 10px;">
     <div class="d-flex align-items-center mb-3">
       <div>
-        <h4 class="page-header">Módulo de Productos</h4>
+        <h4 class="page-header">Módulo de Ventas</h4>
       </div>
       <div class="ms-auto">
-        <a href="./form_nuevo.php" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Agregar Producto</a>
+        <a href="./form_nventa.php?state=n" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Crear Venta</a>
         <a href="../../index.php" class="btn btn-secondary"><i class="bi bi-escape"></i> Cerrar</a>
       </div>
     </div>
     <div class="card text-dark bg-light mb-3 card-shadow">
-      <div class="card-header"><strong>Listado de Productos</strong></div>
+      <div class="card-header"><strong>Listado de Ventas</strong></div>
       <div class="card-body">
         <form action="" method="get" autocomplete="off">
           <div class="input-group mb-3">
@@ -66,21 +66,28 @@ $paginador->crear_paginador();
           <table class="table table-bordered table-hover" style="margin-top: 15px;">
             <thead class="table-primary">
               <tr>
-                <th>Nombre del Producto</th>
-                <th>Precio Venta</th>
-                <th>Existencias</th>
-                <th>Acciones</th>
+                <th>Código</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Estado</th>
               </tr>
             </thead>
             <tbody>
               <?php
-              foreach ($paginador->registros_pagina as $producto) {
+              foreach ($paginador->registros_pagina as $venta) {
                 echo "<tr>";
-                echo "<td>" . $producto['nombre'] . "</td>";
-                echo "<td>$" . $producto['precio_venta'] . "</td>";
-                echo "<td>" . $producto['existencias'] . "</td>";
+                echo "<td>" . $venta['id_cab_venta'] . "</td>";
+                echo "<td>" . $venta['nombre_cliente'] . "</td>";
+                echo "<td>" . $venta['fecha'] . "</td>";
+                echo "<td>$" . $venta['total'] . "</td>";
+                if ($venta['estado'] == 1) {
+                  echo "<td><span class='badge bg-success'>Activo</span></td>";
+                } else {
+                  echo "<td><span class='badge bg-danger'>Cerrado</span></td>";
+                }
                 echo "<td>
-                          <a style='color:white;' href='form_detalles.php?id=" . $producto['id_producto'] . "' class='btn btn-info'><i class='bi bi-eye-fill'></i> Detalles</a>
+                         
                       </td>";
                 echo "</tr>";
               }
