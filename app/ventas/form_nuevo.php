@@ -39,10 +39,9 @@ $productos = $connner->get_records();
         <h4 class="page-header">Módulo de Ventas</h4>
       </div>
       <div class="ms-auto">
-        <a href="#" class="btn btn-success" onclick="guardar()"><i class="bi bi-floppy2-fill"></i> Guardar</a>
+        <a href="form_nventa.php?state=s&id=<?php echo $id; ?>" class="btn btn-success"><i class="bi bi-floppy2-fill"></i> Guardar</a>
         <a href="form_nventa.php?state=d&id=<?php echo $id; ?>" class="btn btn-danger"><i
-            class="bi bi-x-circle-fill"></i> Cancelar</a>
-        <a href="" class="btn btn-secondary"><i class="bi bi-escape"></i> Cerrar</a>
+            class="bi bi-x-circle-fill"></i> Eliminar</a>
       </div>
     </div>
     <div class="card text-dark bg-light mb-3 card-shadow">
@@ -54,8 +53,8 @@ $productos = $connner->get_records();
     flex-direction: row;margin:0;">
             <div class="col-6">
               <label for="nombre" class="form-label">Nombre:</label>
-              <select name="nombre_cliente" id="nombre_cliente" class="form-select" onchange="actualizar()">
-                <option value="">Seleccione un cliente</option>
+              <select name="nombre_cliente" id="nombre_cliente" required class="form-select" onchange="actualizar()">
+                <option value="" hidden>Seleccione un cliente</option>
                 <?php
                 foreach ($clientes as $cliente) {
                   if ($cliente['id_cliente'] == $ventas[0]['id_cliente']) {
@@ -63,7 +62,7 @@ $productos = $connner->get_records();
                   } else {
                     echo "<option value='{$cliente['id_cliente']}'>{$cliente['nombre']}</option>";
                   }
-                }
+                 }
                 ?>
               </select>
               <a href="../clientes/form_nuevo.php?s=<?php echo $id ?>"
@@ -181,6 +180,12 @@ $productos = $connner->get_records();
 <script>
   function actualizar() {
     let cabupd = document.forms['cabupd'];
+    //si el cliente no está seleccionado no se puede actualizar
+    let cliente = document.getElementById('nombre_cliente').value;
+    if (cliente == '') {
+      
+      return;
+    }
     cabupd.submit();
   }
 

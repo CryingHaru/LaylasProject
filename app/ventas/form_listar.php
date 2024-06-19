@@ -44,7 +44,8 @@ $paginador->crear_paginador();
         <h4 class="page-header">Módulo de Ventas</h4>
       </div>
       <div class="ms-auto">
-        <a href="./form_nventa.php?state=n" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Crear Venta</a>
+        <a href="./form_nventa.php?state=n" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Crear
+          Venta</a>
         <a href="../../index.php" class="btn btn-secondary"><i class="bi bi-escape"></i> Cerrar</a>
       </div>
     </div>
@@ -71,6 +72,7 @@ $paginador->crear_paginador();
                 <th>Fecha</th>
                 <th>Total</th>
                 <th>Estado</th>
+                <th style="width:250px">Acciones</th>
               </tr>
             </thead>
             <tbody>
@@ -82,13 +84,28 @@ $paginador->crear_paginador();
                 echo "<td>" . $venta['fecha'] . "</td>";
                 echo "<td>$" . $venta['total'] . "</td>";
                 if ($venta['estado'] == 1) {
-                  echo "<td><span class='badge bg-success'>Activo</span></td>";
+                  echo "<td><center><span class='badge bg-success'>Activo</span></center></td>";
                 } else {
-                  echo "<td><span class='badge bg-danger'>Cerrado</span></td>";
+                  echo "<td><center><span class='badge bg-danger'>Cerrado</span></center></td>";
                 }
-                echo "<td>
-                         
-                      </td>";
+                if ($venta['estado'] == 1) {
+                  echo "<td style='
+                  display: flex;
+                  justify-content: space-around;
+                  align-content: center;
+                  flex-direction: row;
+                  align-items: center;
+              '><a href='form_nventa.php?state=u&id={$venta['id_cab_venta']}' class='btn btn-sm btn-warning px-2'><i class='bi bi-pencil-fill'></i> Editar</a><a href='form_nventa.php?state=d&id={$venta['id_cab_venta']}' class='btn btn-danger btn-sm'><i class='bi bi-x-circle-fill'></i> Eliminar</a></td>";
+                } else {
+                  echo "<td style='
+                  display: flex;
+                  justify-content: space-around;
+                  align-content: center;
+                  flex-direction: row;
+                  align-items: center;
+              '> <a href='form_detalles.php?id={$venta['id_cab_venta']}' class='btn btn-info btn-sm'><i class='bi bi-eye-fill'></i> Detalles</a>
+                  <a href='form_nventa.php?state=d&id={$venta['id_cab_venta']}' class='btn btn-danger btn-sm'><i class='bi bi-x-circle-fill'></i> Eliminar</a></td>";
+                }
                 echo "</tr>";
               }
               ?>
