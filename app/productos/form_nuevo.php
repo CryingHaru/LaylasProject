@@ -36,7 +36,7 @@ $categorias = $server->get_records();
         <div class="ms-auto">
           <a href="#" class="btn btn-success" onclick="guardar()"><i class="bi bi-floppy2-fill"></i> Guardar</a>
           <a href="form_listar.php" class="btn btn-danger"><i class="bi bi-x-circle-fill"></i> Cancelar</a>
-          <a href="" class="btn btn-secondary"><i class="bi bi-escape"></i> Cerrar</a>
+          <a href="../../index.php" class="btn btn-secondary"><i class="bi bi-escape"></i> Cerrar</a>
         </div>
       </div>
       <div class="card text-dark bg-light mb-3 card-shadow">

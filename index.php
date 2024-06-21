@@ -16,13 +16,13 @@
 
 <body>
 
-  <div class="DivTopMenu" style="position: fixed; width: 100%; z-index: 1000000">
+  <div class="DivTopMenu" style="position: fixed; width: 100%; z-index: 1000000" class="flex-column">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon" style="height: 15px;"></span>
       </button>
 
-      <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start" style="background-color: #F8F9FA!important; padding-left: 10px;">
+      <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start" style=" padding-left: 10px;">
         <div class="navbar-nav">
           <div class="dropdown">
             <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Inventario</a>

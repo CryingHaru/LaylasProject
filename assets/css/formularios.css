@@ -4,13 +4,64 @@ body {
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
-  background-image: url(../images/bg_forms.png);
+  background-image: linear-gradient(to top right, #d41af0, #7b0be4) !important;/* background-image: url(../images/bg_forms.png); */
 }
 
 .page-header {
-  color: tomato;
+  color: #ffffff;
+  margin-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: rgba(32, 32, 32, 0.452);
+  border-radius: 15px;
+  font-family: "Source Serif 4", Georgia, serif;
 }
 
 .card-shadow {
   box-shadow: 0px 3px 5px #bbb;
+}
+
+.btn-primary {
+  background-color: #F10086;
+  border-color: #F10086;
+}
+.btn-primary:hover {
+  background-color: #c6026e;
+  border-color: #c6026e;
+}
+
+.btn-info {
+  background-color: #f10086;
+  color: white;
+}
+.btn-info:hover {
+  background-color: #c6026e;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #f10000;
+  border-color: #f10000;
+}
+.btn-danger:hover {
+  background-color: #c60200;
+  border-color: #c60200;
+}
+.btn-success {
+  background-color: #03d403;
+  color: white;
+  border-color: #00cb00;
+}
+
+.input-group-text {
+  background-color: #f10086;
+  color: white;
+}
+.bg-light{
+  background-color: #f1d5fbeb !important;
+}
+.text-dark{
+  color: #323232eb !important;
 }

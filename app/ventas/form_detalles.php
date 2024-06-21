@@ -35,7 +35,7 @@ $productos = $connner->get_records();
 
     <div class="container-fluid" style="padding-top: 10px;">
         <div class="d-flex align-items-center mb-3">
-            <div>
+            <div >
                 <h4 class="page-header">Módulo de Ventas</h4>
             </div>
             <div class="ms-auto">

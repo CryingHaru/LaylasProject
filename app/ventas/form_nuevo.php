@@ -3,7 +3,7 @@ $id = $_GET['id'];
 require_once '../../config/server_connection.php';
 $server = new ServerConnection();
 
-$server->query = "SELECT * FROM tbl_cab_ventas";
+$server->query = "SELECT * FROM tbl_cab_ventas WHERE id_cab_venta = $id";
 $ventas = $server->get_records();
 $conn = new ServerConnection();
 $conn->query = "SELECT * FROM tbl_clientes";

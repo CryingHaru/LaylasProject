@@ -197,7 +197,7 @@
 *,
 *::before,
 *::after {
-  font-family: japon;
+  font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   box-sizing: border-box;
   /*bold */
 
@@ -1998,7 +1998,7 @@ progress {
 
 .table-primary {
   --bs-table-color: #000;
-  --bs-table-bg: #cfe2ff;
+  --bs-table-bg: #f5e5fa;
   --bs-table-border-color: #a6b5cc;
   --bs-table-striped-bg: #c5d7f2;
   --bs-table-striped-color: #000;

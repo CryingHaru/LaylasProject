@@ -10,7 +10,7 @@ INNER JOIN tbl_clientes ON tbl_cab_ventas.id_cliente = tbl_clientes.id_cliente";
 
 $paginador = new Paginador();
 if (isset($_GET['buscar'])) {
-  $query .= " WHERE tbl_productos.nombre LIKE '%" . $_GET['buscar'] . "%'";
+  $query .= " WHERE tbl_clientes.nombre LIKE '%" . $_GET['buscar'] . "%'";
 }
 $paginador->query = $query;
 $paginador->registros_por_pag = 3;

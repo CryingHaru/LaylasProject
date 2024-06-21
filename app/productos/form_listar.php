@@ -41,7 +41,7 @@ $paginador->crear_paginador();
   <div class="container-fluid" style="padding-top: 10px;">
     <div class="d-flex align-items-center mb-3">
       <div>
-        <h4 class="page-header">Módulo de Productos</h4>
+        <h3 class="page-header">Módulo de Productos</h3>
       </div>
       <div class="ms-auto">
         <a href="./form_nuevo.php" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Agregar Producto</a>
